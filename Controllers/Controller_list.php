@@ -12,6 +12,7 @@ class Controller_list extends Controller{
               ];
     $this->render("last", $data);
   }
+  
   public function action_informations(){
     $test = '#^\d+$#';
     $mod = Model::getModel();
@@ -30,7 +31,7 @@ class Controller_list extends Controller{
       $this->render("informations", $data);
     }
     else {
-      $this->action_error("id incorrect dans l'url");
+      
     }
   }
 

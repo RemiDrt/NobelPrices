@@ -23,8 +23,8 @@ class Model
     {
 
         try {
-            include 'Utils/credentials.php';
-            $this->bd = new PDO($dsn, $login, $mdp);
+            //include 'Utils/credentials.php';
+            $this->bd = new PDO('mysql:host=localhost;dbname=nobel_prices', 'root', 'Motdepasse95');
             $this->bd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $this->bd->query("SET nameS 'utf8'");
         } catch (PDOException $e) {
@@ -61,7 +61,6 @@ class Model
             die('Echec getLast, erreur n°' . $e->getCode() . ':' . $e->getMessage());
         }
     }
-
 
     /**
      * Retourne le nombre de prix nobels dans la base de données

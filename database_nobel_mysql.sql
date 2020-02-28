@@ -1,4 +1,4 @@
--- DROP TABLE nobels, categories;
+-- DROP TABLE nobels, categories IF EXISTS; --
 
 
 CREATE TABLE categories (
