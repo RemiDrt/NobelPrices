@@ -162,10 +162,10 @@ class Model
 
         try {
             //Préparation de la requête
-            $requete = $this->bd->prepare('INSERT INTO nobels (year, category, name, birthdate, birthplace, county, motivation) VALUES (:year, :category, :name, :birthdate, :birthplace, :county, :motivation)');
+            $requete = $this->bd->prepare('INSERT INTO nobels (year, category, name, birthdate, birthplace, county, motivation, story) VALUES (:year, :category, :name, :birthdate, :birthplace, :county, :motivation, :story)');
 
             //Remplacement des marqueurs de place par les valeurs
-            $marqueurs = ['year', 'category', 'name', 'birthdate','birthplace', 'county', 'motivation'];
+            $marqueurs = ['year', 'category', 'name', 'birthdate','birthplace', 'county', 'motivation', 'story'];
             foreach ($marqueurs as $value) {
                 $requete->bindValue(':' . $value, $infos[$value]);
             }
@@ -188,10 +188,10 @@ class Model
 
         try {
             //Préparation de la requête
-            $requete = $this->bd->prepare('UPDATE nobels SET year = :year, category = :category, name = :name, birthdate = :birthdate, birthplace = :birthplace, county = :county, motivation = :motivation WHERE id = :id');
+            $requete = $this->bd->prepare('UPDATE nobels SET year = :year, category = :category, name = :name, birthdate = :birthdate, birthplace = :birthplace, county = :county, motivation = :motivation, story = :story WHERE id = :id');
 
             //Remplacement des marqueurs de place par les valeurs
-            $marqueurs = ['id','year', 'category', 'name', 'birthdate','birthplace', 'county', 'motivation'];
+            $marqueurs = ['id','year', 'category', 'name', 'birthdate','birthplace', 'county', 'motivation', 'story'];
             foreach ($marqueurs as $value) {
                 $requete->bindValue(':' . $value, $infos[$value]);
             }
