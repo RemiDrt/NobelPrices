@@ -53,6 +53,7 @@ class Controller_set extends Controller{
         'birthdate' => $infos['birthdate'],
         'county' => $infos['county'],
         'motivation' => $infos['motivation'],
+        'story' => $infos['story'],
         'categories' => $cat
                 ];
       $this->render("form_update", $data);
