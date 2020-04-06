@@ -26,7 +26,8 @@ class Controller_list extends Controller{
         'birthplace' => $infos['birthplace'],
         'birthdate' => $infos['birthdate'],
         'county' => $infos['county'],
-        'motivation' => $infos['motivation']
+        'motivation' => $infos['motivation'],
+        'story' => $infos['story']
                 ];
       $this->render("informations", $data);
     }

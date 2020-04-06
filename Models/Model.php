@@ -24,7 +24,7 @@ class Model
 
         try {
             //include 'Utils/credentials.php';
-            $this->bd = new PDO('mysql:host=localhost;dbname=nobel_prices', 'root', 'Motdepasse95');
+            $this->bd = new PDO('mysql:host=localhost;dbname=nobel_prices', 'root', '');
             $this->bd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $this->bd->query("SET nameS 'utf8'");
         } catch (PDOException $e) {
